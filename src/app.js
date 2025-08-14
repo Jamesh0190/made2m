@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Search, ShoppingBag, User, Menu, X, Camera, Eye, Ruler, Star, ArrowRight } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Play, Search, ShoppingBag, User, Menu, X, Camera, Eye, Ruler, Star } from 'lucide-react';
+import './App.css';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.8,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       id: 2,
@@ -38,7 +39,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.9,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       id: 3,
@@ -49,7 +50,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.7,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       id: 4,
@@ -60,7 +61,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.8,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       id: 5,
@@ -71,7 +72,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.6,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     },
     {
       id: 6,
@@ -82,7 +83,7 @@ const App = () => {
       hasAR: true,
       hasMeasurement: true,
       rating: 4.5,
-      video: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'
+      video: 'https://www.w3schools.com/html/mov_bbb.mp4'
     }
   ];
 
@@ -119,23 +120,20 @@ const App = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold text-purple-600">MadeToMeasure.tv</h1>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Home</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Live TV</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Products</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Brands</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">How It Works</a>
+            <a href="#home" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Home</a>
+            <a href="#live-tv" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Live TV</a>
+            <a href="#products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Products</a>
+            <a href="#brands" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Brands</a>
+            <a href="#how-it-works" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">How It Works</a>
           </nav>
 
-          {/* Search Bar */}
           <div className="hidden md:flex flex-1 max-w-md mx-4">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -149,7 +147,6 @@ const App = () => {
             </div>
           </div>
 
-          {/* User Actions */}
           <div className="flex items-center space-x-4">
             <button className="relative p-2 text-gray-600 hover:text-purple-600">
               <ShoppingBag className="w-6 h-6" />
@@ -172,15 +169,14 @@ const App = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Home</a>
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Live TV</a>
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Products</a>
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Brands</a>
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">How It Works</a>
+            <a href="#home" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Home</a>
+            <a href="#live-tv" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Live TV</a>
+            <a href="#products" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Products</a>
+            <a href="#brands" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Brands</a>
+            <a href="#how-it-works" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">How It Works</a>
             <div className="px-3 py-2">
               <input
                 type="text"
@@ -197,7 +193,7 @@ const App = () => {
   );
 
   const Hero = () => (
-    <section className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white">
+    <section id="home" className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -222,7 +218,7 @@ const App = () => {
   );
 
   const LiveTV = () => (
-    <section className="py-16 bg-gray-50">
+    <section id="live-tv" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">Live Shopping TV</h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -256,7 +252,7 @@ const App = () => {
   );
 
   const ProductGrid = () => (
-    <section className="py-16">
+    <section id="products" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
@@ -265,7 +261,6 @@ const App = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
         <div className="flex flex-wrap justify-center mb-8">
           {categories.map((category) => (
             <button
@@ -282,10 +277,9 @@ const App = () => {
           ))}
         </div>
 
-        {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow product-card">
               <div className="relative">
                 <img src={product.image} alt={product.name} className="w-full h-64 object-cover" />
                 <div className="absolute top-4 right-4 flex space-x-2">
@@ -304,7 +298,7 @@ const App = () => {
                   className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 hover:bg-opacity-30 transition-colors"
                   onClick={() => setActiveVideo(product.video)}
                 >
-                  <Play className="w-12 h-12 text-white opacity-0 hover:opacity-100 transition-opacity" />
+                  <Play className="w-12 h-12 text-white opacity-0 play-button" />
                 </button>
               </div>
               <div className="p-6">
@@ -334,7 +328,7 @@ const App = () => {
   );
 
   const Features = () => (
-    <section className="py-16 bg-gray-50">
+    <section id="how-it-works" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">How It Works</h2>
@@ -392,17 +386,17 @@ const App = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Shop</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white">Fashion</a></li>
-              <li><a href="#" className="hover:text-white">Furniture</a></li>
-              <li><a href="#" className="hover:text-white">Home & Living</a></li>
-              <li><a href="#" className="hover:text-white">Brands</a></li>
+              <li><a href="#products" className="hover:text-white">Fashion</a></li>
+              <li><a href="#products" className="hover:text-white">Furniture</a></li>
+              <li><a href="#products" className="hover:text-white">Home & Living</a></li>
+              <li><a href="#brands" className="hover:text-white">Brands</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white">How It Works</a></li>
+              <li><a href="#how-it-works" className="hover:text-white">How It Works</a></li>
               <li><a href="#" className="hover:text-white">Size Guide</a></li>
               <li><a href="#" className="hover:text-white">Returns</a></li>
               <li><a href="#" className="hover:text-white">Contact</a></li>
@@ -436,13 +430,12 @@ const App = () => {
       <Features />
       <Footer />
       
-      {/* Video Modal */}
       {activeVideo && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={() => setActiveVideo(null)}>
-          <div className="max-w-4xl w-full mx-4">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 video-modal" onClick={() => setActiveVideo(null)}>
+          <div className="max-w-4xl w-full mx-4 relative">
             <button 
               onClick={() => setActiveVideo(null)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300"
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 z-10"
             >
               <X className="w-8 h-8" />
             </button>

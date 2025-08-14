@@ -1,13 +1,13 @@
-/* Additional custom styles if needed */
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Additional custom styles */
+.video-modal {
+  backdrop-filter: blur(4px);
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
+.product-card:hover .play-button {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.play-button {
+  transition: all 0.3s ease;
 }
